@@ -55,7 +55,17 @@ def set_feature(prefix, value):
 set_feature("Age", age)
 set_feature("Sex", sex)
 set_feature("Close Friends", close_friends)
-set_feature("Felt Lonely", loneliness)
+loneliness_map = {
+    "Never": "1",
+    "Rarely": "2",
+    "Sometimes": "3",
+    "Most of the time": "4",
+    "Always": "5"
+}
+
+loneliness_val = loneliness_map[loneliness]
+
+set_feature("Felt Lonely", loneliness_val)
 set_feature("Other Students Kind and Helpful", kindness)
 
 
